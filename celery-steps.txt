@@ -1,0 +1,7 @@
+powershell
+wsl
+redis-server --port 6380
+run main.py
+./MailHog_windows_386
+celery -A main.celery_app worker --loglevel=info --pool=solo
+celery -A main.celery_app beat --loglevel=info
